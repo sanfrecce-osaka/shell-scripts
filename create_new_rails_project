@@ -1,0 +1,4 @@
+#!/bin/sh
+PROJECT_NAME=$1
+
+rails new $PROJECT_NAME -BT -m /Users/moritsukamasatoshi/projects/rails-application-template/template.rb

@@ -1,0 +1,17 @@
+#!/bin/sh
+NEW_RUBY_VERSION=$1
+
+brew update
+brew upgrade rbenv ruby-build
+
+cd ~/.rbenv/plugins/ruby-build
+git pull
+
+cd ~/projects
+
+rbenv install $NEW_RUBY_VERSION
+rbenv global $NEW_RUBY_VERSION
+
+gem install bundler --pre
+
+bundle install
